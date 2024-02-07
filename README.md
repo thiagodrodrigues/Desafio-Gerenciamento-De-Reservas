@@ -68,7 +68,7 @@ Desenvolver uma API RESTful utilizando NestJs para gerenciar reservas. Cada rese
 O Banco de Dados foi criado no MySQL seguindo padrão de tabelas e colunas exposto a seguir:
 
 <p align="center">
-<img src="./docs/bd.jpeg" alt="Banco de Dados">
+<img src="./docs/db.jpeg" alt="Banco de Dados">
 
 </br>
 
