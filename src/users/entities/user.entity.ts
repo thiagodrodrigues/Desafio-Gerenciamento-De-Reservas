@@ -33,5 +33,5 @@ export class Users extends Model {
   cpf: number;
 
   @HasMany(() => UsersReservations, {foreignKey: 'userId'})
-  usersReservations: UsersReservations[];
+  usersReservations?: UsersReservations[];
 }

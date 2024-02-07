@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ReservationsModule } from './reservations/reservations.module';
@@ -8,6 +8,7 @@ import { Reservations } from './reservations/entities/reservation.entity';
 import { UsersModule } from './users/users.module';
 import { Users } from './users/entities/user.entity';
 import { UsersReservations } from './reservations/entities/userReservation.entity';
+import { Sequelize } from 'sequelize-typescript';
 
 @Module({
   imports: [
@@ -24,9 +25,21 @@ import { UsersReservations } from './reservations/entities/userReservation.entit
       }
     ),
     ReservationsModule,
-    UsersModule
+    UsersModule,
+    SequelizeModule.forFeature([Reservations, UsersReservations, Users])
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule implements OnModuleInit {
+  constructor(
+    private readonly sequelize: Sequelize,
+    private readonly appService: AppService,
+  ) {}
+
+  async onModuleInit() {
+    await this.sequelize.sync();
+    await this.appService.seed();
+  }
+}
+/* export class AppModule {} */

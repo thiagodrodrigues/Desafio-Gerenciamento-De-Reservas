@@ -80,7 +80,7 @@ O Banco de Dados foi criado no MySQL seguindo padrão de tabelas e colunas expos
 A Documentação da API, rotas e exemplos foram feitos através do Postman e publicado no link: <br>
 
 <h1>
-<p align="center"> <a href="https://documenter.getpostman.com/view/24484577/2s8Z72VrRr"><img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="github logo"> Documentação API - Postman <img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="postman logo"></a> </p>
+<p align="center"> <a href="https://documenter.getpostman.com/view/24484577/2s9Yyy9KAf"><img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="github logo"> Documentação API - Postman <img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="postman logo"></a> </p>
 </h1>
 </br>
 
