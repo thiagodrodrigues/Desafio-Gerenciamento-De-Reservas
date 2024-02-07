@@ -1,73 +1,117 @@
+<h1 align=center> Projeto nScreen - Vaga DEV Back-End Jr. <br> Thiago Daniel Alvim Rodrigues</hi> <br>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <img src="./docs/logo.jpeg" width="50%">
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 💻 Sobre o projeto
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<br>
 
-## Installation
+Desenvolver uma API RESTful utilizando NestJs para gerenciar reservas. Cada reserva deve conter informações sobre a data da reserva, detalhes sobre as pessoas envolvidas na reserva (nome, data de nascimento, CPF), bem como informações adicionais
 
-```bash
-$ npm install
-```
+## Requisitos
 
-## Running the app
+- Criar Endpoints para:
+  -> Criar uma nova reserva
+  -> Listar todas as reservas
 
-```bash
-# development
-$ npm run start
+- Cada reserva deve conter as seguintes informações:
+  -> Data da reserva.
+  -> Detalhes sobre as pessoas envolvidas na reserva:
+    * Nome
+    * Data de Nascimento
+    * CPF
+  -> Informações adicionais sobre a reserva
 
-# watch mode
-$ npm run start:dev
+- Utilize uma estrutura de dados adequada para armazenar as reservas (pode ser um banco de dados como SQLite com TypeORM, MongoDB, etc.)
 
-# production mode
-$ npm run start:prod
-```
+### Sugestões de EndPoints
 
-## Test
+- POST `/reservas`
+  -> Cria uma nova reserva. Corpo da requisição JSON com a data da reserva, detalhes sobre as pessoas envolvidas e informações adicionais.
 
-```bash
-# unit tests
-$ npm run test
+- GET `/reservas`
+  -> Lista todas as reservas.
 
-# e2e tests
-$ npm run test:e2e
+### Ferramentas
 
-# test coverage
-$ npm run test:cov
-```
+- NodeJS com NestJs
+- MySQL
+- TypeScript
+- Sequelize
+- Postman (Documentação)
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## :wrench: Como usar a API:
 
-## Stay in touch
+1. Clonar o repositório na máquina local utilizando o comando `git clone git@github.com:thiagodrodrigues/Desafio-Gerenciamento-De-Reservas.git`
+1. Após clonar o repositório, executar o comando `npm install` ou `yarn install`.
+2. Acessar o arquivo `.env example`, renomear o arquivo para `.env` e alterar a conexão do banco de dados com as seguintes instruções:
+- DB_HOST="local irá rodar o servidor; exemplo 'localhost' "
+- DB_PORT="porta utilizada pelo mysql; por padrão o mysql utiliza a porta 3306"
+- DB_USERNAME="nome de usuario no mysql"
+- DB_PASSWORD="senha de usuario no mysql"
+- DB_DATABASE="Nome do banco de dados: reservationService"
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+3. Executar o comando `npm run create:db` que irá gerar o banco de dados e popular com exemplos.
+4. Executar o comando `npm run start:dev` para iniciar sua conexão com o servidor
+6. Caso tudo tenha dado certo, você está pronto para testar a API, caso não, revise o passo-a-passo
 
-## License
 
-Nest is [MIT licensed](LICENSE).
+
+## :floppy_disk: Banco de dados:
+
+O Banco de Dados foi criado no MySQL seguindo padrão de tabelas e colunas exposto a seguir:
+
+<p align="center">
+<img src="./docs/bd.jpeg" alt="Banco de Dados">
+
+</br>
+
+
+---
+
+## :memo: Documentação da API
+
+A Documentação da API, rotas e exemplos foram feitos através do Postman e publicado no link: <br>
+
+<h1>
+<p align="center"> <a href="https://documenter.getpostman.com/view/24484577/2s8Z72VrRr"><img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="github logo"> Documentação API - Postman <img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" alt="postman" height="30" width="30" alt="postman logo"></a> </p>
+</h1>
+</br>
+
+
+<h2> 👨‍💻 Contribuidor </h2><br>
+
+<h3>
+<table align=center>
+  <tr>
+
+   <td align="center"> <img src="https://avatars.githubusercontent.com/u/109247611?v=4"  width=175/></br> Thiago Rodrigues </br><a href="https://github.com/thiagodrodrigues"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" height="30" width="30" alt="github-logo" /> </a> <a href="https://www.linkedin.com/in/thiago-daniel-alvim-rodrigues-5229a8124/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" height="30" width="30" alt="linkedin-logo" /> </a>
+   </td>
+   
+  </tr>
+</table> </h3>
+
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+<br><br>
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="52" alt="typescript logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" height="40" width="52" alt="nodejs logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" height="40" width="52" alt="nestjs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" height="40" width="52" alt="mysql logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-plain-wordmark.svg" height="40" width="52" alt="sequelize logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" height="40" width="52" alt="postman logo"  />
+  <img src="https://www.payoda.com/wp-content/uploads/2021/05/1_mbP4Bjrs8Hshx7IgjsUNSg.jpeg" height="40" width="52" alt="API logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="52" alt="npm logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" width="52" alt="github logo"  />
+</div>
