@@ -49,8 +49,8 @@ Desenvolver uma API RESTful utilizando NestJs para gerenciar reservas. Cada rese
 ## :wrench: Como usar a API:
 
 1. Clonar o repositório na máquina local utilizando o comando `git clone git@github.com:thiagodrodrigues/Desafio-Gerenciamento-De-Reservas.git`
-1. Após clonar o repositório, executar o comando `npm install` ou `yarn install`.
-2. Acessar o arquivo `.env example`, renomear o arquivo para `.env` e alterar a conexão do banco de dados com as seguintes instruções:
+2. Após clonar o repositório, executar o comando `npm install` ou `yarn install`.
+3. Acessar o arquivo `.env example`, renomear o arquivo para `.env` e alterar a conexão do banco de dados com as seguintes instruções:
 - DB_HOST="local irá rodar o servidor; exemplo 'localhost' "
 - DB_PORT="porta utilizada pelo mysql; por padrão o mysql utiliza a porta 3306"
 - DB_USERNAME="nome de usuario no mysql"
