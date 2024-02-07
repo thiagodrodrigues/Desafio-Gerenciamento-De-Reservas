@@ -57,8 +57,8 @@ Desenvolver uma API RESTful utilizando NestJs para gerenciar reservas. Cada rese
 - DB_PASSWORD="senha de usuario no mysql"
 - DB_DATABASE="Nome do banco de dados: reservationService"
 
-3. Executar o comando `npm run create:db` que irá gerar o banco de dados e popular com exemplos.
-4. Executar o comando `npm run start:dev` para iniciar sua conexão com o servidor
+4. Executar o comando `npm run create:db` que irá gerar o banco de dados e popular com exemplos.
+5. Executar o comando `npm run start:dev` para iniciar sua conexão com o servidor
 6. Caso tudo tenha dado certo, você está pronto para testar a API, caso não, revise o passo-a-passo
 
 
